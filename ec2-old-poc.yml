@@ -1,0 +1,18 @@
+policies:
+  - name: ec2-old
+    description: |
+      Add tag to instances with more than 60 days
+    resource: ec2
+    filters:
+      - and:
+        - type: value
+          key: "tag:Environment"
+          op: regex
+          value: ".*(Production).*"
+        - "State.Name": running 
+        - type: instance-age
+          days: 390
+    actions:
+      - type: tag
+        tag: 'old'
+        value: 'true'

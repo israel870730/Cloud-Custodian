@@ -1,0 +1,15 @@
+1- Activar el Env de Python3
+    python3 –m venv custodian
+    source custodian/bin/activate
+    pip install c7n
+
+2- Validar la plantilla de cloudcustodian
+    custodian validate policies/ec2-old-dev.yaml
+
+3- Ejecutar la plantilla de cloudcustodian
+    custodian run \
+    -s output ec2-old-poc.yml \
+    --cache-period 0 \
+    --region=us-east-1
+
+https://medium.com/globant/cloud-custodian-easy-way-to-explore-instances-in-aws-cloud-2544e075303d
