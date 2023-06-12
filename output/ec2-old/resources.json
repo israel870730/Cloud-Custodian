@@ -1,0 +1,193 @@
+[
+  {
+    "AmiLaunchIndex": 0,
+    "ImageId": "ami-01cc34ab2709337aa",
+    "InstanceId": "i-01d3abbc25524e2a4",
+    "InstanceType": "t3.medium",
+    "KeyName": "AmazonLinux2-Hardened-image-from-AMI",
+    "LaunchTime": "2021-11-10T13:22:07+00:00",
+    "Monitoring": {
+      "State": "enabled"
+    },
+    "Placement": {
+      "AvailabilityZone": "us-east-1a",
+      "GroupName": "",
+      "Tenancy": "default"
+    },
+    "PrivateDnsName": "ip-10-198-3-126.ec2.internal",
+    "PrivateIpAddress": "10.198.3.126",
+    "ProductCodes": [],
+    "PublicDnsName": "ec2-3-213-218-55.compute-1.amazonaws.com",
+    "PublicIpAddress": "3.213.218.55",
+    "State": {
+      "Code": 16,
+      "Name": "running"
+    },
+    "StateTransitionReason": "",
+    "SubnetId": "subnet-00178a076a3d3811c",
+    "VpcId": "vpc-03cbff84a2a8f81fd",
+    "Architecture": "x86_64",
+    "BlockDeviceMappings": [
+      {
+        "DeviceName": "/dev/xvda",
+        "Ebs": {
+          "AttachTime": "2021-11-10T13:22:08+00:00",
+          "DeleteOnTermination": true,
+          "Status": "attached",
+          "VolumeId": "vol-0fd597175fa97ed72"
+        }
+      }
+    ],
+    "ClientToken": "7545f428-0d0a-110a-0028-ec2bee978495",
+    "EbsOptimized": false,
+    "EnaSupport": true,
+    "Hypervisor": "xen",
+    "IamInstanceProfile": {
+      "Arn": "arn:aws:iam::114712064551:instance-profile/Web-Proxy-Test-Outbound-Proxy",
+      "Id": "AIPARVNK7GITTKUIWMYRU"
+    },
+    "NetworkInterfaces": [
+      {
+        "Association": {
+          "IpOwnerId": "114712064551",
+          "PublicDnsName": "ec2-3-213-218-55.compute-1.amazonaws.com",
+          "PublicIp": "3.213.218.55"
+        },
+        "Attachment": {
+          "AttachTime": "2021-11-10T13:22:07+00:00",
+          "AttachmentId": "eni-attach-09535f98bae7f3dbb",
+          "DeleteOnTermination": true,
+          "DeviceIndex": 0,
+          "Status": "attached",
+          "NetworkCardIndex": 0
+        },
+        "Description": "",
+        "Groups": [
+          {
+            "GroupName": "Web-Proxy-Test-OutboundProxySecurityGroup-1FULJGMYRDZJQ",
+            "GroupId": "sg-053e85afd0cb88a09"
+          }
+        ],
+        "Ipv6Addresses": [],
+        "MacAddress": "0a:f1:91:d7:b8:15",
+        "NetworkInterfaceId": "eni-0a50e07b9253bcae4",
+        "OwnerId": "114712064551",
+        "PrivateDnsName": "ip-10-198-3-126.ec2.internal",
+        "PrivateIpAddress": "10.198.3.126",
+        "PrivateIpAddresses": [
+          {
+            "Association": {
+              "IpOwnerId": "114712064551",
+              "PublicDnsName": "ec2-3-213-218-55.compute-1.amazonaws.com",
+              "PublicIp": "3.213.218.55"
+            },
+            "Primary": true,
+            "PrivateDnsName": "ip-10-198-3-126.ec2.internal",
+            "PrivateIpAddress": "10.198.3.126"
+          }
+        ],
+        "SourceDestCheck": true,
+        "Status": "in-use",
+        "SubnetId": "subnet-00178a076a3d3811c",
+        "VpcId": "vpc-03cbff84a2a8f81fd",
+        "InterfaceType": "interface"
+      }
+    ],
+    "RootDeviceName": "/dev/xvda",
+    "RootDeviceType": "ebs",
+    "SecurityGroups": [
+      {
+        "GroupName": "Web-Proxy-Test-OutboundProxySecurityGroup-1FULJGMYRDZJQ",
+        "GroupId": "sg-053e85afd0cb88a09"
+      }
+    ],
+    "SourceDestCheck": true,
+    "Tags": [
+      {
+        "Key": "ApplicationID",
+        "Value": "outbound-proxy"
+      },
+      {
+        "Key": "aws:autoscaling:groupName",
+        "Value": "Web-Proxy-Test-OutboundProxyASG-8GRGHJYBSLFV"
+      },
+      {
+        "Key": "Region",
+        "Value": "us-east-1"
+      },
+      {
+        "Key": "old",
+        "Value": "true"
+      },
+      {
+        "Key": "Environment",
+        "Value": "Production"
+      },
+      {
+        "Key": "AppVersion",
+        "Value": "1.0.0"
+      },
+      {
+        "Key": "aws:cloudformation:stack-id",
+        "Value": "arn:aws:cloudformation:us-east-1:114712064551:stack/Web-Proxy-Test/590af0e0-416e-11ec-a1c3-128f32cab2cf"
+      },
+      {
+        "Key": "Name",
+        "Value": "Web-Prod-outbound-proxy"
+      },
+      {
+        "Key": "Type",
+        "Value": "PS"
+      },
+      {
+        "Key": "Consumer",
+        "Value": "Web"
+      },
+      {
+        "Key": "aws:cloudformation:logical-id",
+        "Value": "OutboundProxyASG"
+      },
+      {
+        "Key": "aws:cloudformation:stack-name",
+        "Value": "Web-Proxy-Test"
+      }
+    ],
+    "VirtualizationType": "hvm",
+    "CpuOptions": {
+      "CoreCount": 1,
+      "ThreadsPerCore": 2
+    },
+    "CapacityReservationSpecification": {
+      "CapacityReservationPreference": "open"
+    },
+    "HibernationOptions": {
+      "Configured": false
+    },
+    "MetadataOptions": {
+      "State": "applied",
+      "HttpTokens": "optional",
+      "HttpPutResponseHopLimit": 1,
+      "HttpEndpoint": "enabled",
+      "HttpProtocolIpv6": "disabled",
+      "InstanceMetadataTags": "disabled"
+    },
+    "EnclaveOptions": {
+      "Enabled": false
+    },
+    "PlatformDetails": "Linux/UNIX",
+    "UsageOperation": "RunInstances",
+    "UsageOperationUpdateTime": "2021-11-10T13:22:07+00:00",
+    "PrivateDnsNameOptions": {
+      "HostnameType": "ip-name",
+      "EnableResourceNameDnsARecord": false,
+      "EnableResourceNameDnsAAAARecord": false
+    },
+    "MaintenanceOptions": {
+      "AutoRecovery": "default"
+    },
+    "c7n:MatchedFilters": [
+      "tag:Environment",
+      "State.Name"
+    ]
+  }
+]

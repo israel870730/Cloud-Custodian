@@ -1,7 +1,7 @@
 policies:
   - name: ec2-old
     description: |
-      Add tag to instances with more than 60 days
+      Add tag to instances with more than 390 days
     resource: ec2
     filters:
       - and:
