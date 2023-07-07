@@ -6,10 +6,31 @@
 2- Validar la plantilla de cloudcustodian
     custodian validate policies/ec2-old-dev.yaml
 
-3- Ejecutar la plantilla de cloudcustodian
+3- Ejecutar la plantilla de cloudcustodian para agregar tag
     custodian run \
-    -s output ec2-old-poc.yml \
+    -s output policies/ec2-old-poc.yml \
     --cache-period 0 \
     --region=us-east-1
+
+4- Ejecutar la plantilla de cloudcustodian para buscar instance ec2 en diferentes regiones de una cuenta
+    custodian run --dryrun \
+    -s output policies/find-ec2.yml \
+    --cache-period 0 \
+    --profile verifonehq-net-production_tmp \ #Especificar cual perfil de AWS esta usando, si no pone ninguno toma el que esta por defecto
+    --region us-east-1 \
+    --region us-west-1 \
+    --region us-east-2 \
+    --region us-west-2 \
+    --region eu-west-1 \
+    --region eu-west-2 \
+    --region eu-central-1 \
+    --region ap-south-1 \
+    --region ap-southeast-2
+
+5- Buscar un certificado CM 
+    custodian run --dryrun \
+    -s output policies/find-certificate.yml \
+    --cache-period 0 \
+    --region us-east-1
 
 https://medium.com/globant/cloud-custodian-easy-way-to-explore-instances-in-aws-cloud-2544e075303d

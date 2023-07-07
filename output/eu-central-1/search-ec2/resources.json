@@ -1,0 +1,226 @@
+[
+  {
+    "AmiLaunchIndex": 0,
+    "ImageId": "ami-0bd99ef9eccfee250",
+    "InstanceId": "i-0d170b78cecb93e9a",
+    "InstanceType": "t2.2xlarge",
+    "KeyName": "VedaanthTest",
+    "LaunchTime": "2023-06-10T02:48:54+00:00",
+    "Monitoring": {
+      "State": "disabled"
+    },
+    "Placement": {
+      "AvailabilityZone": "eu-central-1c",
+      "GroupName": "",
+      "Tenancy": "default"
+    },
+    "PrivateDnsName": "ip-172-31-11-252.eu-central-1.compute.internal",
+    "PrivateIpAddress": "172.31.11.252",
+    "ProductCodes": [],
+    "PublicDnsName": "ec2-3-73-78-23.eu-central-1.compute.amazonaws.com",
+    "PublicIpAddress": "3.73.78.23",
+    "State": {
+      "Code": 16,
+      "Name": "running"
+    },
+    "StateTransitionReason": "",
+    "SubnetId": "subnet-902619dd",
+    "VpcId": "vpc-d4111bbf",
+    "Architecture": "x86_64",
+    "BlockDeviceMappings": [
+      {
+        "DeviceName": "/dev/sdb",
+        "Ebs": {
+          "AttachTime": "2021-11-24T07:41:56+00:00",
+          "DeleteOnTermination": false,
+          "Status": "attached",
+          "VolumeId": "vol-03bc542e2c9dc7470"
+        }
+      },
+      {
+        "DeviceName": "/dev/xvda",
+        "Ebs": {
+          "AttachTime": "2023-06-08T15:53:32+00:00",
+          "DeleteOnTermination": false,
+          "Status": "attached",
+          "VolumeId": "vol-0e19b1c0a5af7578a"
+        }
+      }
+    ],
+    "ClientToken": "",
+    "EbsOptimized": false,
+    "EnaSupport": true,
+    "Hypervisor": "xen",
+    "IamInstanceProfile": {
+      "Arn": "arn:aws:iam::114712064551:instance-profile/ec2-ssm-full",
+      "Id": "AIPARVNK7GIT45VTD7T33"
+    },
+    "NetworkInterfaces": [
+      {
+        "Association": {
+          "IpOwnerId": "amazon",
+          "PublicDnsName": "ec2-3-73-78-23.eu-central-1.compute.amazonaws.com",
+          "PublicIp": "3.73.78.23"
+        },
+        "Attachment": {
+          "AttachTime": "2021-11-24T07:41:55+00:00",
+          "AttachmentId": "eni-attach-04266259382af0437",
+          "DeleteOnTermination": true,
+          "DeviceIndex": 0,
+          "Status": "attached",
+          "NetworkCardIndex": 0
+        },
+        "Description": "",
+        "Groups": [
+          {
+            "GroupName": "TestSecurityGroup",
+            "GroupId": "sg-04768e850e9f78c6e"
+          }
+        ],
+        "Ipv6Addresses": [],
+        "MacAddress": "0a:1f:9f:a8:2d:a4",
+        "NetworkInterfaceId": "eni-0719093570fd38b11",
+        "OwnerId": "114712064551",
+        "PrivateDnsName": "ip-172-31-11-252.eu-central-1.compute.internal",
+        "PrivateIpAddress": "172.31.11.252",
+        "PrivateIpAddresses": [
+          {
+            "Association": {
+              "IpOwnerId": "amazon",
+              "PublicDnsName": "ec2-3-73-78-23.eu-central-1.compute.amazonaws.com",
+              "PublicIp": "3.73.78.23"
+            },
+            "Primary": true,
+            "PrivateDnsName": "ip-172-31-11-252.eu-central-1.compute.internal",
+            "PrivateIpAddress": "172.31.11.252"
+          }
+        ],
+        "SourceDestCheck": true,
+        "Status": "in-use",
+        "SubnetId": "subnet-902619dd",
+        "VpcId": "vpc-d4111bbf",
+        "InterfaceType": "interface"
+      }
+    ],
+    "RootDeviceName": "/dev/xvda",
+    "RootDeviceType": "ebs",
+    "SecurityGroups": [
+      {
+        "GroupName": "TestSecurityGroup",
+        "GroupId": "sg-04768e850e9f78c6e"
+      }
+    ],
+    "SourceDestCheck": true,
+    "Tags": [
+      {
+        "Key": "abs:cloudformation:stack-yo",
+        "Value": "qq"
+      },
+      {
+        "Key": "abs:cloudformation:stack-id",
+        "Value": "Cloud Stack Id EE"
+      },
+      {
+        "Key": "App_Name",
+        "Value": "VHQ"
+      },
+      {
+        "Key": "Region",
+        "Value": "APAC"
+      },
+      {
+        "Key": "Type",
+        "Value": "Application"
+      },
+      {
+        "Key": "Common_Tag",
+        "Value": "596384114749"
+      },
+      {
+        "Key": "SSM",
+        "Value": "-"
+      },
+      {
+        "Key": "Environment",
+        "Value": "Dev"
+      },
+      {
+        "Key": "Owner_VP",
+        "Value": "Paul.Jefford@VERIFONE.com"
+      },
+      {
+        "Key": "abs:cloudformation:stack-namer",
+        "Value": "qq"
+      },
+      {
+        "Key": "Country",
+        "Value": "IN"
+      },
+      {
+        "Key": "Service",
+        "Value": "Greenbox"
+      },
+      {
+        "Key": "Owner_Team",
+        "Value": "i.vcs.global.vhq@SMOKESTACK.VERIFONE.com"
+      },
+      {
+        "Key": "Name",
+        "Value": "VedaanthTest-Linux"
+      },
+      {
+        "Key": "Patch_Group",
+        "Value": "NA"
+      },
+      {
+        "Key": "Checker",
+        "Value": "ABC"
+      },
+      {
+        "Key": "ec2:cloudformation:stack-name",
+        "Value": "arn:aws:cloudformation:us-east-1:114712064551:stack/POC-Kafka-APP/6d145de0-45f8-11ec-8fc8-0a5194e47253"
+      },
+      {
+        "Key": "Category",
+        "Value": "VHQ"
+      }
+    ],
+    "VirtualizationType": "hvm",
+    "CpuOptions": {
+      "CoreCount": 8,
+      "ThreadsPerCore": 1
+    },
+    "CapacityReservationSpecification": {
+      "CapacityReservationPreference": "open"
+    },
+    "HibernationOptions": {
+      "Configured": false
+    },
+    "MetadataOptions": {
+      "State": "applied",
+      "HttpTokens": "optional",
+      "HttpPutResponseHopLimit": 1,
+      "HttpEndpoint": "enabled",
+      "HttpProtocolIpv6": "disabled",
+      "InstanceMetadataTags": "disabled"
+    },
+    "EnclaveOptions": {
+      "Enabled": false
+    },
+    "PlatformDetails": "Linux/UNIX",
+    "UsageOperation": "RunInstances",
+    "UsageOperationUpdateTime": "2021-11-24T07:41:55+00:00",
+    "PrivateDnsNameOptions": {
+      "HostnameType": "ip-name",
+      "EnableResourceNameDnsARecord": true,
+      "EnableResourceNameDnsAAAARecord": false
+    },
+    "MaintenanceOptions": {
+      "AutoRecovery": "default"
+    },
+    "CurrentInstanceBootMode": "legacy-bios",
+    "c7n:MatchedFilters": [
+      "PrivateIpAddress"
+    ]
+  }
+]

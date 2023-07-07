@@ -1,0 +1,86 @@
+{
+  "policy": {
+    "name": "search-ec2",
+    "description": "Search instance by private ip\n",
+    "resource": "ec2",
+    "filters": [
+      {
+        "type": "value",
+        "key": "PrivateIpAddress",
+        "value": "172.31.11.252",
+        "op": "regex"
+      }
+    ]
+  },
+  "version": "0.9.27",
+  "execution": {
+    "id": "38fcc96d-e10d-48dc-a002-d1c1d065a847",
+    "start": 1688739699.513727,
+    "end_time": 1688739701.8629272,
+    "duration": 2.3492002487182617
+  },
+  "config": {
+    "region": "eu-central-1",
+    "regions": [
+      "us-east-1",
+      "us-west-1",
+      "us-east-2",
+      "us-west-2",
+      "eu-west-1",
+      "eu-west-2",
+      "eu-central-1",
+      "ap-south-1",
+      "ap-southeast-2"
+    ],
+    "cache": "~/.cache/cloud-custodian.cache",
+    "profile": null,
+    "account_id": "114712064551",
+    "assume_role": null,
+    "external_id": null,
+    "log_group": null,
+    "tracer": null,
+    "metrics_enabled": null,
+    "metrics": null,
+    "output_dir": "output/eu-central-1",
+    "cache_period": 0,
+    "dryrun": false,
+    "authorization_file": null,
+    "subparser": "run",
+    "config": null,
+    "configs": [
+      "policies/find-ec2.yml"
+    ],
+    "policy_filters": [],
+    "resource_types": [],
+    "verbose": null,
+    "quiet": null,
+    "debug": false,
+    "skip_validation": false,
+    "command": "c7n.commands.run",
+    "vars": null
+  },
+  "sys-stats": {},
+  "api-stats": {
+    "ec2.DescribeInstances": 1
+  },
+  "metrics": [
+    {
+      "MetricName": "ResourceCount",
+      "Timestamp": "2023-07-07T14:21:41.862029",
+      "Value": 1,
+      "Unit": "Count"
+    },
+    {
+      "MetricName": "ResourceTime",
+      "Timestamp": "2023-07-07T14:21:41.862040",
+      "Value": 2.32090163230896,
+      "Unit": "Seconds"
+    },
+    {
+      "MetricName": "ActionTime",
+      "Timestamp": "2023-07-07T14:21:41.862903",
+      "Value": 2.86102294921875e-06,
+      "Unit": "Seconds"
+    }
+  ]
+}

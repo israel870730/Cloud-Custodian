@@ -1,0 +1,9 @@
+policies:
+  - name: find-certificate
+    resource: aws.acm-certificate
+    filters:
+      - type: value
+        key: DomainName
+        value: ".*(reno.poc.vficloud.net).*" #De esta forma filtro un dominio de que esta definido asi en el CM "*.reno.poc.vficloud.net"
+        #value: "elk.vfpoc.name"
+        op: regex

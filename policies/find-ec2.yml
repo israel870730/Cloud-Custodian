@@ -1,0 +1,10 @@
+policies:
+  - name: search-ec2
+    description: |
+      Search instance by private ip
+    resource: ec2
+    filters:
+      - type: value
+        key: "PrivateIpAddress"
+        value: "172.31.11.252"
+        op: regex

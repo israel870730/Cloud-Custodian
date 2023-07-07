@@ -32,10 +32,10 @@
   },
   "version": "0.9.27",
   "execution": {
-    "id": "14ef7115-8cbf-4515-a5cc-cf401f52b314",
-    "start": 1686608666.7579653,
-    "end_time": 1686608677.976798,
-    "duration": 11.218832731246948
+    "id": "cecee038-6981-4078-abc9-1ad15b6e4de8",
+    "start": 1688737121.5809615,
+    "end_time": 1688737126.9355805,
+    "duration": 5.354619026184082
   },
   "config": {
     "region": "us-east-1",
@@ -58,7 +58,7 @@
     "subparser": "run",
     "config": null,
     "configs": [
-      "ec2-old-poc.yml"
+      "policies/ec2-old-poc.yml"
     ],
     "policy_filters": [],
     "resource_types": [],
@@ -77,20 +77,20 @@
   "metrics": [
     {
       "MetricName": "ResourceCount",
-      "Timestamp": "2023-06-12T22:24:36.293754",
+      "Timestamp": "2023-07-07T13:38:44.876615",
       "Value": 1,
       "Unit": "Count"
     },
     {
       "MetricName": "ResourceTime",
-      "Timestamp": "2023-06-12T22:24:36.293788",
-      "Value": 9.51681113243103,
+      "Timestamp": "2023-07-07T13:38:44.876641",
+      "Value": 3.2778356075286865,
       "Unit": "Seconds"
     },
     {
       "MetricName": "ActionTime",
-      "Timestamp": "2023-06-12T22:24:37.976774",
-      "Value": 1.6819565296173096,
+      "Timestamp": "2023-07-07T13:38:46.935541",
+      "Value": 2.0579781532287598,
       "Unit": "Seconds"
     }
   ]
