@@ -12,11 +12,12 @@
     --cache-period 0 \
     --region=us-east-1
 
-4- Ejecutar la plantilla de cloudcustodian para buscar instance ec2 en diferentes regiones de una cuenta
-    custodian run --dryrun \
+4- Ejecutar la plantilla de cloudcustodian para buscar instance ec2 en diferentes regiones de una cuenta,
+   Especificar cual perfil de AWS esta usando, si no pone ninguno toma el que esta por defecto
+   custodian run --dryrun \
     -s output policies/find-ec2.yml \
     --cache-period 0 \
-    --profile verifonehq-net-production_tmp \ #Especificar cual perfil de AWS esta usando, si no pone ninguno toma el que esta por defecto
+    --profile verifonehq-net-production_tmp \ 
     --region us-east-1 \
     --region us-west-1 \
     --region us-east-2 \

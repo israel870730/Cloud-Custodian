@@ -6,5 +6,5 @@ policies:
     filters:
       - type: value
         key: "PrivateIpAddress"
-        value: "172.31.11.252"
+        value: "10.150.0.4"
         op: regex
