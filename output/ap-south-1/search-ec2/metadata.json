@@ -5,19 +5,29 @@
     "resource": "ec2",
     "filters": [
       {
-        "type": "value",
-        "key": "PrivateIpAddress",
-        "value": "10.150.0.4",
-        "op": "regex"
+        "and": [
+          {
+            "type": "value",
+            "key": "PrivateIpAddress",
+            "value": "10.79.170.27",
+            "op": "regex"
+          },
+          {
+            "type": "value",
+            "key": "PublicIpAddress",
+            "value": "52.90.200.91",
+            "op": "regex"
+          }
+        ]
       }
     ]
   },
   "version": "0.9.27",
   "execution": {
-    "id": "4d503788-81e0-43b3-a866-539e4ba71036",
-    "start": 1690210739.3840277,
-    "end_time": 1690210743.7720842,
-    "duration": 4.388056516647339
+    "id": "09beb1dd-653f-4c2d-9ae4-9665e9fd46b1",
+    "start": 1691083642.7720833,
+    "end_time": 1691083645.832835,
+    "duration": 3.0607516765594482
   },
   "config": {
     "region": "ap-south-1",
@@ -33,8 +43,8 @@
       "ap-southeast-2"
     ],
     "cache": "~/.cache/cloud-custodian.cache",
-    "profile": "verifonehq-net-production_tmp",
-    "account_id": "596384114749",
+    "profile": null,
+    "account_id": "099139769505",
     "assume_role": null,
     "external_id": null,
     "log_group": null,
@@ -66,14 +76,14 @@
   "metrics": [
     {
       "MetricName": "ResourceCount",
-      "Timestamp": "2023-07-24T14:59:03.771626",
+      "Timestamp": "2023-08-03T17:27:25.832538",
       "Value": 0,
       "Unit": "Count"
     },
     {
       "MetricName": "ResourceTime",
-      "Timestamp": "2023-07-24T14:59:03.771662",
-      "Value": 4.372092247009277,
+      "Timestamp": "2023-08-03T17:27:25.832557",
+      "Value": 3.0367512702941895,
       "Unit": "Seconds"
     }
   ]

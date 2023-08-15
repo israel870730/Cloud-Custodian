@@ -4,7 +4,12 @@ policies:
       Search instance by private ip
     resource: ec2
     filters:
+      # - type: value
+      #   key: "PrivateIpAddress"
+      #   value: "10.79.170.27"
+      #   op: regex
       - type: value
-        key: "PrivateIpAddress"
-        value: "10.150.0.4"
+        key: "PublicIpAddress"
+        value: "52.90.200.91"
         op: regex
+# Preguntar a Javier como puedo ejecutar estas dos policies a la ves

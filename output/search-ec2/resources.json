@@ -1,1 +1,241 @@
-[]
+[
+  {
+    "AmiLaunchIndex": 0,
+    "ImageId": "ami-31620526",
+    "InstanceId": "i-021274a5afdb5f918",
+    "InstanceType": "t2.micro",
+    "KeyName": "VHQStagingKeyPair",
+    "LaunchTime": "2016-11-04T18:23:56+00:00",
+    "Monitoring": {
+      "State": "disabled"
+    },
+    "Placement": {
+      "AvailabilityZone": "us-east-1b",
+      "GroupName": "",
+      "Tenancy": "default"
+    },
+    "PrivateDnsName": "ip-10-79-170-27.ec2.internal",
+    "PrivateIpAddress": "10.79.170.27",
+    "ProductCodes": [],
+    "PublicDnsName": "ec2-52-90-200-91.compute-1.amazonaws.com",
+    "PublicIpAddress": "52.90.200.91",
+    "State": {
+      "Code": 16,
+      "Name": "running"
+    },
+    "StateTransitionReason": "",
+    "SubnetId": "subnet-98a979b5",
+    "VpcId": "vpc-4caea12b",
+    "Architecture": "x86_64",
+    "BlockDeviceMappings": [
+      {
+        "DeviceName": "/dev/xvda",
+        "Ebs": {
+          "AttachTime": "2016-11-04T18:23:58+00:00",
+          "DeleteOnTermination": true,
+          "Status": "attached",
+          "VolumeId": "vol-0e637d5a6b05e49fa"
+        }
+      },
+      {
+        "DeviceName": "/dev/sdf",
+        "Ebs": {
+          "AttachTime": "2016-11-04T18:23:58+00:00",
+          "DeleteOnTermination": true,
+          "Status": "attached",
+          "VolumeId": "vol-06bd1d70201050144"
+        }
+      },
+      {
+        "DeviceName": "/dev/sdd",
+        "Ebs": {
+          "AttachTime": "2016-11-04T18:23:58+00:00",
+          "DeleteOnTermination": true,
+          "Status": "attached",
+          "VolumeId": "vol-077a555f91fdfda85"
+        }
+      },
+      {
+        "DeviceName": "/dev/sdg",
+        "Ebs": {
+          "AttachTime": "2016-11-04T18:23:58+00:00",
+          "DeleteOnTermination": true,
+          "Status": "attached",
+          "VolumeId": "vol-0bff282effd5a7913"
+        }
+      },
+      {
+        "DeviceName": "/dev/sde",
+        "Ebs": {
+          "AttachTime": "2016-11-04T18:23:58+00:00",
+          "DeleteOnTermination": true,
+          "Status": "attached",
+          "VolumeId": "vol-0af6a0eb082ac1f78"
+        }
+      },
+      {
+        "DeviceName": "/dev/sdc",
+        "Ebs": {
+          "AttachTime": "2016-11-04T18:23:58+00:00",
+          "DeleteOnTermination": true,
+          "Status": "attached",
+          "VolumeId": "vol-08f94ef58206ece5b"
+        }
+      },
+      {
+        "DeviceName": "/dev/sdb",
+        "Ebs": {
+          "AttachTime": "2016-11-04T18:23:58+00:00",
+          "DeleteOnTermination": true,
+          "Status": "attached",
+          "VolumeId": "vol-09966625b218d9f0c"
+        }
+      }
+    ],
+    "ClientToken": "ABNip1478283835879",
+    "EbsOptimized": false,
+    "Hypervisor": "xen",
+    "IamInstanceProfile": {
+      "Arn": "arn:aws:iam::099139769505:instance-profile/VHQStagingNginxNLB-VHQStagingInstanceProfile-HN280C2NHTTJ",
+      "Id": "AIPAIPRROJXPBBHS6NWDS"
+    },
+    "NetworkInterfaces": [
+      {
+        "Association": {
+          "IpOwnerId": "amazon",
+          "PublicDnsName": "ec2-52-90-200-91.compute-1.amazonaws.com",
+          "PublicIp": "52.90.200.91"
+        },
+        "Attachment": {
+          "AttachTime": "2016-11-04T18:23:56+00:00",
+          "AttachmentId": "eni-attach-373ab287",
+          "DeleteOnTermination": true,
+          "DeviceIndex": 0,
+          "Status": "attached",
+          "NetworkCardIndex": 0
+        },
+        "Description": "Primary network interface",
+        "Groups": [
+          {
+            "GroupName": "VHQStagingNginxSG",
+            "GroupId": "sg-136ba06e"
+          }
+        ],
+        "Ipv6Addresses": [],
+        "MacAddress": "12:7c:1e:12:d1:ce",
+        "NetworkInterfaceId": "eni-e9f9c715",
+        "OwnerId": "099139769505",
+        "PrivateDnsName": "ip-10-79-170-27.ec2.internal",
+        "PrivateIpAddress": "10.79.170.27",
+        "PrivateIpAddresses": [
+          {
+            "Association": {
+              "IpOwnerId": "amazon",
+              "PublicDnsName": "ec2-52-90-200-91.compute-1.amazonaws.com",
+              "PublicIp": "52.90.200.91"
+            },
+            "Primary": true,
+            "PrivateDnsName": "ip-10-79-170-27.ec2.internal",
+            "PrivateIpAddress": "10.79.170.27"
+          }
+        ],
+        "SourceDestCheck": true,
+        "Status": "in-use",
+        "SubnetId": "subnet-98a979b5",
+        "VpcId": "vpc-4caea12b",
+        "InterfaceType": "interface"
+      }
+    ],
+    "RootDeviceName": "/dev/xvda",
+    "RootDeviceType": "ebs",
+    "SecurityGroups": [
+      {
+        "GroupName": "VHQStagingNginxSG",
+        "GroupId": "sg-136ba06e"
+      }
+    ],
+    "SourceDestCheck": true,
+    "Tags": [
+      {
+        "Key": "Consumer",
+        "Value": "VHQStaging"
+      },
+      {
+        "Key": "Name",
+        "Value": "VHQStagingNginx0"
+      },
+      {
+        "Key": "Owner_Team",
+        "Value": "i.vcs.global.vhq@SMOKESTACK.VERIFONE.com"
+      },
+      {
+        "Key": "Common_Tag",
+        "Value": "99139769505"
+      },
+      {
+        "Key": "Service",
+        "Value": "VHQ"
+      },
+      {
+        "Key": "Category",
+        "Value": "VHQ"
+      },
+      {
+        "Key": "Type",
+        "Value": "Middleware"
+      },
+      {
+        "Key": "Owner_VP",
+        "Value": "Paul.Jefford@VERIFONE.com"
+      },
+      {
+        "Key": "Country",
+        "Value": "US"
+      },
+      {
+        "Key": "Environment",
+        "Value": "Staging"
+      },
+      {
+        "Key": "Region",
+        "Value": "Americas"
+      },
+      {
+        "Key": "App_Name",
+        "Value": "VHQ"
+      }
+    ],
+    "VirtualizationType": "hvm",
+    "CpuOptions": {
+      "CoreCount": 1,
+      "ThreadsPerCore": 1
+    },
+    "CapacityReservationSpecification": {
+      "CapacityReservationPreference": "open"
+    },
+    "HibernationOptions": {
+      "Configured": false
+    },
+    "MetadataOptions": {
+      "State": "applied",
+      "HttpTokens": "optional",
+      "HttpPutResponseHopLimit": 1,
+      "HttpEndpoint": "enabled",
+      "HttpProtocolIpv6": "disabled",
+      "InstanceMetadataTags": "disabled"
+    },
+    "EnclaveOptions": {
+      "Enabled": false
+    },
+    "PlatformDetails": "Linux/UNIX",
+    "UsageOperation": "RunInstances",
+    "UsageOperationUpdateTime": "2016-11-04T18:23:56+00:00",
+    "PrivateDnsNameOptions": {},
+    "MaintenanceOptions": {
+      "AutoRecovery": "default"
+    },
+    "c7n:MatchedFilters": [
+      "PublicIpAddress"
+    ]
+  }
+]
