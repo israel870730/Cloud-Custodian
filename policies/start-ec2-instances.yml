@@ -1,0 +1,16 @@
+policies:
+  - name: start-ec2-instances-daily
+    description: |
+      Lambda to star ec2 instances with the tag "cost_optimization"
+    mode:
+      type: periodic
+      schedule: "cron(30 02 ? * MON-FRI *)" 
+      role: arn:aws:iam::023199979500:role/Role-to-lambda-stop-start-ec2
+      tags:
+        Creator: "@irgarcia"
+    resource: ec2
+    filters:
+      - "tag:cost_optimization": present
+      - "State.Name": stopped
+    actions:
+      - type: start

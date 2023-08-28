@@ -34,4 +34,19 @@
     --cache-period 0 \
     --region us-east-1
 
+6- Para crear lambda que start y stop ec2 instanes en un horario determinado
+    Primero exportar el perfil que voy a usar
+    - export AWS_PROFILE=poc
+    Despues ejecutar la policy
+        - custodian run -s output policies/stop-ec2-instances.yml --region=us-east-1
+        - custodian run -s output policies/start-ec2-instances.yml --region=eu-west-2
+    Esto crea automaticamente 2 funciones lambdas para estas tareas
+    Para que la lambda funciones las intancias deben tener el tag que estamos usando,
+    en este caso "cost_optimization"
+
 https://medium.com/globant/cloud-custodian-easy-way-to-explore-instances-in-aws-cloud-2544e075303d
+
+https://cloudcustodian.io/docs/aws/policy/lambda.html
+https://cloudcustodian.io/docs/usecases/ec2offhours.html
+
+https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/ScheduledEvents.html

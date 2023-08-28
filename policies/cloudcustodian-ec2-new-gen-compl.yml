@@ -1,0 +1,21 @@
+- name: cloudcustodian-ec2-new-gen-compliance-stop
+    resource: aws.ec2
+    comment: |
+      Stop all (non-ASG) instances previously marked for stoppage by today's
+      date, and schedule them for termination after verifying that they continue
+      to be non-compliant to tagging policies.
+    filters:
+      - "tag:aws:autoscaling:groupName": absent
+      - "State.Name": running
+    mode:
+      schedule: "rate(2 minutes)"
+      type: periodic
+      role: CloudCustodian
+      tags:
+        App_Name: cloud_custodian
+        Technical_Owner: cloud_infrastructure
+        LOB: shared_services
+        Business_Owner: cloud_admin
+        Product: cloud_custodian
+    actions:
+      - stop

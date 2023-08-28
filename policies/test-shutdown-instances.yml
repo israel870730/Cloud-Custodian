@@ -1,0 +1,14 @@
+policies:
+  - name: shutdown-instances
+    resource: ec2
+    filters:
+      - or:
+        - tag:cost_optimization: present
+          value: "true"
+      - type: offhour #Esta policy apaga las instancias con el tag "cost_optimization" a las 14:00
+        tag: 'Schedule'
+        default_tz: UTC
+        offhour: 14
+        #offminute: 00
+    actions:
+      - stop

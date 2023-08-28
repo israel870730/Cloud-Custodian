@@ -1,0 +1,11 @@
+policies:
+  - name: test-stop-ec2-instances-daily
+    resource: ec2
+    filters:
+      - "tag:cost_optimization": present
+      - type: offhour
+        default_tz: utc
+        offhour: 15
+        tag: cost_optimization
+    actions:
+      - stop

@@ -1,11 +1,159 @@
 [
   {
     "AmiLaunchIndex": 0,
-    "ImageId": "ami-31620526",
-    "InstanceId": "i-021274a5afdb5f918",
-    "InstanceType": "t2.micro",
-    "KeyName": "VHQStagingKeyPair",
-    "LaunchTime": "2016-11-04T18:23:56+00:00",
+    "ImageId": "ami-02f3f602d23f1659d",
+    "InstanceId": "i-049e636b0ec065333",
+    "InstanceType": "t2.small",
+    "KeyName": "Renovite-poc-linux-jumpbox",
+    "LaunchTime": "2023-08-24T15:52:40+00:00",
+    "Monitoring": {
+      "State": "disabled"
+    },
+    "Placement": {
+      "AvailabilityZone": "us-east-1c",
+      "GroupName": "",
+      "Tenancy": "default"
+    },
+    "PrivateDnsName": "ip-10-196-160-24.ec2.internal",
+    "PrivateIpAddress": "10.196.160.24",
+    "ProductCodes": [],
+    "PublicDnsName": "ec2-3-238-128-10.compute-1.amazonaws.com",
+    "PublicIpAddress": "3.238.128.10",
+    "State": {
+      "Code": 16,
+      "Name": "running"
+    },
+    "StateTransitionReason": "",
+    "SubnetId": "subnet-08554b785c0f51f6b",
+    "VpcId": "vpc-01b3f79ec3258feea",
+    "Architecture": "x86_64",
+    "BlockDeviceMappings": [
+      {
+        "DeviceName": "/dev/xvda",
+        "Ebs": {
+          "AttachTime": "2023-03-20T20:15:47+00:00",
+          "DeleteOnTermination": true,
+          "Status": "attached",
+          "VolumeId": "vol-0e20e711f0faa7b8c"
+        }
+      }
+    ],
+    "ClientToken": "f31f1b97-e984-4c18-953a-500d223254c7",
+    "EbsOptimized": false,
+    "EnaSupport": true,
+    "Hypervisor": "xen",
+    "NetworkInterfaces": [
+      {
+        "Association": {
+          "IpOwnerId": "amazon",
+          "PublicDnsName": "ec2-3-238-128-10.compute-1.amazonaws.com",
+          "PublicIp": "3.238.128.10"
+        },
+        "Attachment": {
+          "AttachTime": "2023-03-20T20:15:46+00:00",
+          "AttachmentId": "eni-attach-005385551b219d24d",
+          "DeleteOnTermination": true,
+          "DeviceIndex": 0,
+          "Status": "attached",
+          "NetworkCardIndex": 0
+        },
+        "Description": "",
+        "Groups": [
+          {
+            "GroupName": "Renovite-poc-linux-jumpbox",
+            "GroupId": "sg-049efe6b73910be54"
+          }
+        ],
+        "Ipv6Addresses": [],
+        "MacAddress": "02:21:99:c6:b5:e1",
+        "NetworkInterfaceId": "eni-000168cc375db79be",
+        "OwnerId": "114712064551",
+        "PrivateDnsName": "ip-10-196-160-24.ec2.internal",
+        "PrivateIpAddress": "10.196.160.24",
+        "PrivateIpAddresses": [
+          {
+            "Association": {
+              "IpOwnerId": "amazon",
+              "PublicDnsName": "ec2-3-238-128-10.compute-1.amazonaws.com",
+              "PublicIp": "3.238.128.10"
+            },
+            "Primary": true,
+            "PrivateDnsName": "ip-10-196-160-24.ec2.internal",
+            "PrivateIpAddress": "10.196.160.24"
+          }
+        ],
+        "SourceDestCheck": true,
+        "Status": "in-use",
+        "SubnetId": "subnet-08554b785c0f51f6b",
+        "VpcId": "vpc-01b3f79ec3258feea",
+        "InterfaceType": "interface"
+      }
+    ],
+    "RootDeviceName": "/dev/xvda",
+    "RootDeviceType": "ebs",
+    "SecurityGroups": [
+      {
+        "GroupName": "Renovite-poc-linux-jumpbox",
+        "GroupId": "sg-049efe6b73910be54"
+      }
+    ],
+    "SourceDestCheck": true,
+    "Tags": [
+      {
+        "Key": "Name",
+        "Value": "renovite-jumbox-test"
+      },
+      {
+        "Key": "cost_optimization",
+        "Value": "true"
+      }
+    ],
+    "VirtualizationType": "hvm",
+    "CpuOptions": {
+      "CoreCount": 1,
+      "ThreadsPerCore": 1
+    },
+    "CapacityReservationSpecification": {
+      "CapacityReservationPreference": "open"
+    },
+    "HibernationOptions": {
+      "Configured": false
+    },
+    "MetadataOptions": {
+      "State": "applied",
+      "HttpTokens": "required",
+      "HttpPutResponseHopLimit": 2,
+      "HttpEndpoint": "enabled",
+      "HttpProtocolIpv6": "disabled",
+      "InstanceMetadataTags": "disabled"
+    },
+    "EnclaveOptions": {
+      "Enabled": false
+    },
+    "BootMode": "uefi-preferred",
+    "PlatformDetails": "Linux/UNIX",
+    "UsageOperation": "RunInstances",
+    "UsageOperationUpdateTime": "2023-03-20T20:15:46+00:00",
+    "PrivateDnsNameOptions": {
+      "HostnameType": "ip-name",
+      "EnableResourceNameDnsARecord": true,
+      "EnableResourceNameDnsAAAARecord": false
+    },
+    "MaintenanceOptions": {
+      "AutoRecovery": "default"
+    },
+    "CurrentInstanceBootMode": "legacy-bios",
+    "c7n:MatchedFilters": [
+      "PublicIpAddress"
+    ]
+  },
+  {
+    "AmiLaunchIndex": 0,
+    "ImageId": "ami-0b0dcb5067f052a63",
+    "InstanceId": "i-0173809daee8485a0",
+    "InstanceType": "t2.small",
+    "KeyName": "Renovite-poc-linux-jumpbox",
+    "LaunchTime": "2023-08-24T15:52:38+00:00",
     "Monitoring": {
       "State": "disabled"
     },
@@ -14,135 +162,78 @@
       "GroupName": "",
       "Tenancy": "default"
     },
-    "PrivateDnsName": "ip-10-79-170-27.ec2.internal",
-    "PrivateIpAddress": "10.79.170.27",
+    "PrivateDnsName": "ip-10-196-0-172.ec2.internal",
+    "PrivateIpAddress": "10.196.0.172",
     "ProductCodes": [],
-    "PublicDnsName": "ec2-52-90-200-91.compute-1.amazonaws.com",
-    "PublicIpAddress": "52.90.200.91",
+    "PublicDnsName": "ec2-54-226-20-100.compute-1.amazonaws.com",
+    "PublicIpAddress": "54.226.20.100",
     "State": {
       "Code": 16,
       "Name": "running"
     },
     "StateTransitionReason": "",
-    "SubnetId": "subnet-98a979b5",
-    "VpcId": "vpc-4caea12b",
+    "SubnetId": "subnet-05eaa80aa72a22b40",
+    "VpcId": "vpc-01b3f79ec3258feea",
     "Architecture": "x86_64",
     "BlockDeviceMappings": [
       {
         "DeviceName": "/dev/xvda",
         "Ebs": {
-          "AttachTime": "2016-11-04T18:23:58+00:00",
+          "AttachTime": "2022-12-07T19:03:54+00:00",
           "DeleteOnTermination": true,
           "Status": "attached",
-          "VolumeId": "vol-0e637d5a6b05e49fa"
-        }
-      },
-      {
-        "DeviceName": "/dev/sdf",
-        "Ebs": {
-          "AttachTime": "2016-11-04T18:23:58+00:00",
-          "DeleteOnTermination": true,
-          "Status": "attached",
-          "VolumeId": "vol-06bd1d70201050144"
-        }
-      },
-      {
-        "DeviceName": "/dev/sdd",
-        "Ebs": {
-          "AttachTime": "2016-11-04T18:23:58+00:00",
-          "DeleteOnTermination": true,
-          "Status": "attached",
-          "VolumeId": "vol-077a555f91fdfda85"
-        }
-      },
-      {
-        "DeviceName": "/dev/sdg",
-        "Ebs": {
-          "AttachTime": "2016-11-04T18:23:58+00:00",
-          "DeleteOnTermination": true,
-          "Status": "attached",
-          "VolumeId": "vol-0bff282effd5a7913"
-        }
-      },
-      {
-        "DeviceName": "/dev/sde",
-        "Ebs": {
-          "AttachTime": "2016-11-04T18:23:58+00:00",
-          "DeleteOnTermination": true,
-          "Status": "attached",
-          "VolumeId": "vol-0af6a0eb082ac1f78"
-        }
-      },
-      {
-        "DeviceName": "/dev/sdc",
-        "Ebs": {
-          "AttachTime": "2016-11-04T18:23:58+00:00",
-          "DeleteOnTermination": true,
-          "Status": "attached",
-          "VolumeId": "vol-08f94ef58206ece5b"
-        }
-      },
-      {
-        "DeviceName": "/dev/sdb",
-        "Ebs": {
-          "AttachTime": "2016-11-04T18:23:58+00:00",
-          "DeleteOnTermination": true,
-          "Status": "attached",
-          "VolumeId": "vol-09966625b218d9f0c"
+          "VolumeId": "vol-07892710c7501ec19"
         }
       }
     ],
-    "ClientToken": "ABNip1478283835879",
+    "ClientToken": "f8cd8704-e34d-4144-a6a0-682e492f1806",
     "EbsOptimized": false,
+    "EnaSupport": true,
     "Hypervisor": "xen",
-    "IamInstanceProfile": {
-      "Arn": "arn:aws:iam::099139769505:instance-profile/VHQStagingNginxNLB-VHQStagingInstanceProfile-HN280C2NHTTJ",
-      "Id": "AIPAIPRROJXPBBHS6NWDS"
-    },
     "NetworkInterfaces": [
       {
         "Association": {
           "IpOwnerId": "amazon",
-          "PublicDnsName": "ec2-52-90-200-91.compute-1.amazonaws.com",
-          "PublicIp": "52.90.200.91"
+          "PublicDnsName": "ec2-54-226-20-100.compute-1.amazonaws.com",
+          "PublicIp": "54.226.20.100"
         },
         "Attachment": {
-          "AttachTime": "2016-11-04T18:23:56+00:00",
-          "AttachmentId": "eni-attach-373ab287",
+          "AttachTime": "2022-12-07T19:03:53+00:00",
+          "AttachmentId": "eni-attach-016e927da88449697",
           "DeleteOnTermination": true,
           "DeviceIndex": 0,
           "Status": "attached",
           "NetworkCardIndex": 0
         },
-        "Description": "Primary network interface",
+        "Description": "",
         "Groups": [
           {
-            "GroupName": "VHQStagingNginxSG",
-            "GroupId": "sg-136ba06e"
+            "GroupName": "Renovite-poc-linux-jumpbox",
+            "GroupId": "sg-049efe6b73910be54"
           }
         ],
         "Ipv6Addresses": [],
-        "MacAddress": "12:7c:1e:12:d1:ce",
-        "NetworkInterfaceId": "eni-e9f9c715",
-        "OwnerId": "099139769505",
-        "PrivateDnsName": "ip-10-79-170-27.ec2.internal",
-        "PrivateIpAddress": "10.79.170.27",
+        "MacAddress": "0e:1f:f0:a7:2f:49",
+        "NetworkInterfaceId": "eni-0cd87abae4c664c7b",
+        "OwnerId": "114712064551",
+        "PrivateDnsName": "ip-10-196-0-172.ec2.internal",
+        "PrivateIpAddress": "10.196.0.172",
         "PrivateIpAddresses": [
           {
             "Association": {
               "IpOwnerId": "amazon",
-              "PublicDnsName": "ec2-52-90-200-91.compute-1.amazonaws.com",
-              "PublicIp": "52.90.200.91"
+              "PublicDnsName": "ec2-54-226-20-100.compute-1.amazonaws.com",
+              "PublicIp": "54.226.20.100"
             },
             "Primary": true,
-            "PrivateDnsName": "ip-10-79-170-27.ec2.internal",
-            "PrivateIpAddress": "10.79.170.27"
+            "PrivateDnsName": "ip-10-196-0-172.ec2.internal",
+            "PrivateIpAddress": "10.196.0.172"
           }
         ],
         "SourceDestCheck": true,
         "Status": "in-use",
-        "SubnetId": "subnet-98a979b5",
-        "VpcId": "vpc-4caea12b",
+        "SubnetId": "subnet-05eaa80aa72a22b40",
+        "VpcId": "vpc-01b3f79ec3258feea",
         "InterfaceType": "interface"
       }
     ],
@@ -150,59 +241,19 @@
     "RootDeviceType": "ebs",
     "SecurityGroups": [
       {
-        "GroupName": "VHQStagingNginxSG",
-        "GroupId": "sg-136ba06e"
+        "GroupName": "Renovite-poc-linux-jumpbox",
+        "GroupId": "sg-049efe6b73910be54"
       }
     ],
     "SourceDestCheck": true,
     "Tags": [
       {
-        "Key": "Consumer",
-        "Value": "VHQStaging"
-      },
-      {
         "Key": "Name",
-        "Value": "VHQStagingNginx0"
+        "Value": "Renovite-poc-linux-jumpbox"
       },
       {
-        "Key": "Owner_Team",
-        "Value": "i.vcs.global.vhq@SMOKESTACK.VERIFONE.com"
-      },
-      {
-        "Key": "Common_Tag",
-        "Value": "99139769505"
-      },
-      {
-        "Key": "Service",
-        "Value": "VHQ"
-      },
-      {
-        "Key": "Category",
-        "Value": "VHQ"
-      },
-      {
-        "Key": "Type",
-        "Value": "Middleware"
-      },
-      {
-        "Key": "Owner_VP",
-        "Value": "Paul.Jefford@VERIFONE.com"
-      },
-      {
-        "Key": "Country",
-        "Value": "US"
-      },
-      {
-        "Key": "Environment",
-        "Value": "Staging"
-      },
-      {
-        "Key": "Region",
-        "Value": "Americas"
-      },
-      {
-        "Key": "App_Name",
-        "Value": "VHQ"
+        "Key": "cost_optimization",
+        "Value": "true"
       }
     ],
     "VirtualizationType": "hvm",
@@ -229,13 +280,18 @@
     },
     "PlatformDetails": "Linux/UNIX",
     "UsageOperation": "RunInstances",
-    "UsageOperationUpdateTime": "2016-11-04T18:23:56+00:00",
-    "PrivateDnsNameOptions": {},
+    "UsageOperationUpdateTime": "2022-12-07T19:03:53+00:00",
+    "PrivateDnsNameOptions": {
+      "HostnameType": "ip-name",
+      "EnableResourceNameDnsARecord": true,
+      "EnableResourceNameDnsAAAARecord": false
+    },
     "MaintenanceOptions": {
       "AutoRecovery": "default"
     },
+    "CurrentInstanceBootMode": "legacy-bios",
     "c7n:MatchedFilters": [
-      "PublicIpAddress"
+      "PrivateIpAddress"
     ]
   }
 ]
