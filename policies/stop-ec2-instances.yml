@@ -5,7 +5,7 @@ policies:
     mode:
       type: periodic
       schedule: "cron(30 16 ? * MON-FRI *)"
-      role: arn:aws:iam::ACCOUNT:role/Role-to-lambda-stop-start-ec2 #Si cambio de cuenta debo cambiar el arn del rol
+      role: arn:aws:iam::012345678901:role/Role-to-lambda-stop-start-ec2 #Si cambio de cuenta debo cambiar el arn del rol
       tags:
         Creator: "@irgarcia"
     resource: ec2

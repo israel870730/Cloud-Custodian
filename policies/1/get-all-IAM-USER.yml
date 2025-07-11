@@ -1,0 +1,7 @@
+policies:
+#Policy to get all info of the IAM-USER
+#Con esta policy traigo toda la informacion de IAM-USER y puedo ver las propiedades que quiero consultar de cada una
+  - name: get-all-IAM-USER
+    description: |
+      Get all info of the IAM-USER
+    resource: iam-user

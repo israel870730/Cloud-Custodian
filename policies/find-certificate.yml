@@ -4,6 +4,6 @@ policies:
     filters:
       - type: value
         key: DomainName
-        value: ".*(reno.poc.vficloud.net).*" #De esta forma filtro un dominio de que esta definido asi en el CM "*.reno.poc.vficloud.net"
+        value: ".*(poc.com).*" #De esta forma filtro un dominio que esta definido asi en el CM
         #value: "elk.vfpoc.name"
         op: regex

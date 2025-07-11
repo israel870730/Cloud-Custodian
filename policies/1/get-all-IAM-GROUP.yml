@@ -1,0 +1,7 @@
+policies:
+#Policy to get all info of the IAM-GROUP
+#Con esta policy traigo toda la informacion de IAM-GROUP y puedo ver las propiedades que quiero consultar de cada una
+  - name: get-all-IAM-GROUP
+    description: |
+      Get all info of the IAM-GROUP
+    resource: iam-group

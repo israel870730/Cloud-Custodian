@@ -1,0 +1,7 @@
+policies:
+#Policy to get all info of the EBS-Snapshot
+#Con esta policy traigo toda la informacion de EBS-Snapshot y puedo ver las propiedades que quiero consultar de cada una
+  - name: get-all-ebs-snapshot
+    description: |
+      Get all info of the EBS-Snapshot
+    resource: ebs-snapshot

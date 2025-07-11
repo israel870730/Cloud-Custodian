@@ -1,0 +1,7 @@
+policies:
+#Policy to get all info of the security-group
+#Con esta policy traigo toda la informacion de security-group y puedo ver las propiedades que quiero consultar de cada una
+  - name: get-all-security-group
+    description: |
+      Get all info of the security-group
+    resource: security-group

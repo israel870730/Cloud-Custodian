@@ -1,0 +1,7 @@
+policies:
+#Policy to get all info of the S3
+#Con esta policy traigo toda la informacion de S3 y puedo ver las propiedades que quiero consultar de cada una
+  - name: get-all-S3
+    description: |
+      Get all info of the S3
+    resource: s3

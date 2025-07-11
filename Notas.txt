@@ -1,14 +1,24 @@
-1- Activar el Env de Python3
+1- Crear env de Python3
     python3 –m venv custodian
     source custodian/bin/activate
     pip install c7n
+    
+    Nota: Si el contenedor es nuevo instalar python3.8-venv
+    - apt update && apt install python3.8-venv
 
 2- Validar la plantilla de cloudcustodian
     custodian validate policies/ec2-old-dev.yaml
 
 3- Ejecutar la plantilla de cloudcustodian para agregar tag
+    # Probar primero con la opcion "--dryrun"
+    custodian run --dryrun \
+    -s output policies/add-tag-ec2-instances.yml \
+    --cache-period 0 \
+    --region=us-east-1
+    
+    # Ejecutar
     custodian run \
-    -s output policies/ec2-old-poc.yml \
+    -s output policies/add-tag-ec2-instances.yml \
     --cache-period 0 \
     --region=us-east-1
 
@@ -38,11 +48,17 @@
     Primero exportar el perfil que voy a usar
     - export AWS_PROFILE=poc
     Despues ejecutar la policy
-        - custodian run -s output policies/stop-ec2-instances.yml --region=us-east-1
-        - custodian run -s output policies/start-ec2-instances.yml --region=eu-west-2
+        - custodian run --dryrun -s output policies/stop-ec2-instances.yml --region=us-east-1 --cache-period 0
+        - custodian run -s output policies/stop-ec2-instances.yml --region=us-east-1 --cache-period 0
+        
+        - custodian run --dryrun -s output policies/start-ec2-instances.yml --region=us-east-1 --cache-period 0
+        - custodian run -s output policies/start-ec2-instances.yml --region=us-east-1 --cache-period 0
     Esto crea automaticamente 2 funciones lambdas para estas tareas
     Para que la lambda funciones las intancias deben tener el tag que estamos usando,
     en este caso "cost_optimization"
+
+    Si queremos hacer un reporte sobre eso que se ejecuto anteriormente ejecutamos lo sgte: 
+    - custodian report -s output policies/stop-ec2-instances.yml --region=us-east-1
 
 https://medium.com/globant/cloud-custodian-easy-way-to-explore-instances-in-aws-cloud-2544e075303d
 

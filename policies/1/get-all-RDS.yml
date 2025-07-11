@@ -1,0 +1,7 @@
+policies:
+#Policy to get all info of the RDS
+#Con esta policy traigo toda la informacion de RDS y puedo ver las propiedades que quiero consultar de cada una
+  - name: get-all-RDS
+    description: |
+      Get all info of the RDS
+    resource: rds

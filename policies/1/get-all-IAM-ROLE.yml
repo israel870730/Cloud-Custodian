@@ -1,0 +1,7 @@
+policies:
+#Policy to get all info of the IAM-ROLE
+#Con esta policy traigo toda la informacion de IAM-ROLE y puedo ver las propiedades que quiero consultar de cada una
+  - name: get-all-IAM-ROLE
+    description: |
+      Get all info of the IAM-ROLE
+    resource: iam-role

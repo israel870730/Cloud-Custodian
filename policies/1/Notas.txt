@@ -1,0 +1,21 @@
+custodian run -s output policies/1/get-all-AMI.yml --region=us-east-1 --cache-period 0
+custodian run -s output policies/1/get-all-EBS.yml --region=us-east-1 --cache-period 0
+custodian run -s output policies/1/get-all-EBS-Snapshot.yml --region=us-east-1 --cache-period 0
+#Ejecutar las policies para obtener informacion sobre los recursos
+custodian run -s output policies/1/get-all-RDS.yml --region=us-east-1 --cache-period 0
+custodian run -s output policies/1/get-all-S.yml --region=us-east-1 --cache-period 0
+custodian run -s output policies/1/get-all-VPC.yml --region=us-east-1 --cache-period 0
+custodian run -s output policies/1/get-all-IAM-USER.yml --region=us-east-1 --cache-period 0
+custodian run -s output policies/1/get-all-IAM-ROLE.yml --region=us-east-1 --cache-period 0
+custodian run -s output policies/1/get-all-IAM-GROUP.yml --region=us-east-1 --cache-period 0
+custodian run -s output policies/1/get-all-SG.yml --region=us-east-1 --cache-period 0
+
+#Las policies anteriormente ejecutadas guardan la info en "output", sobre esa info puedo obtener un reporte,
+#El reporte ya viene con un grupo de columnas predefinidas
+custodian report -s output policies/1/get-all-EC2-instances.yaml --region us-east-1
+
+#Si quiere agregarle alguna columna de mas seria de la sgte forma:
+custodian report -s output policies/1/get-all-EC2-instances.yaml --field "AMI=ImageId" --region us-east-1 
+
+#Si queremos mostrar solo la columna del ID de las AMI
+custodian report -s output policies/1/get-all-EC2-instances.yaml --no-default-fields --field "AMI=ImageId" --region us-east-1

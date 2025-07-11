@@ -1,0 +1,133 @@
+policies:
+#Policy add tag for all the instances
+  - name: tag-instances-by-ip
+    description: |
+      Add tag to instances
+    resource: ec2
+    filters:
+      - type: value
+        key: "PrivateIpAddress"
+        op: in
+        value_from:
+          url: file:./policies/ip/0-ip_addresses.txt
+          format: txt
+    actions:
+      - type: tag
+        key: 'cost_optimization'
+        value: 'True'
+#Policy to GUI instances group
+  - name: tag-instances-by-ip-GUI
+    description: |
+      Add tag to GUI instances group
+    resource: ec2
+    filters:
+      - type: value
+        key: "PrivateIpAddress"
+        op: in
+        value: ["10.130.36.61", "10.130.36.108", "10.130.36.152"]
+    actions:
+      - type: tag
+        key: 'app'
+        value: 'GUI'
+#Policy to MSG-DLD instances group
+  - name: tag-instances-by-ip-MSG-DLD
+    description: |
+      Add tag to MSG-DLD instances group
+    resource: ec2
+    filters:
+      - type: value
+        key: "PrivateIpAddress"
+        op: in
+        value_from:
+          url: file:./policies/ip/2-ip_addresses_MSG-DLD.txt
+          format: txt
+    actions:
+      - type: tag
+        key: 'app'
+        value: 'MSG-DLD'
+#Policy to API instances group
+  - name: tag-instances-by-ip-API
+    description: |
+      Add tag to API instances group
+    resource: ec2
+    filters:
+      - type: value
+        key: "PrivateIpAddress"
+        op: in
+        value: ["10.130.36.20", "10.130.36.123", "10.130.36.176"]
+    actions:
+      - type: tag
+        key: 'app'
+        value: 'API'
+#Policy to ADM instances group
+  - name: tag-instances-by-ip-ADM
+    description: |
+      Add tag to ADM instances group
+    resource: ec2
+    filters:
+      - type: value
+        key: "PrivateIpAddress"
+        op: in
+        value_from:
+          url: file:./policies/ip/4-ip_addresses_ADM.txt
+          format: txt
+    actions:
+      - type: tag
+        key: 'app'
+        value: 'ADM'
+#Policy to ATS instances group
+  - name: tag-instances-by-ip-ATS
+    description: |
+      Add tag to ATS instances group
+    resource: ec2
+    filters:
+      - type: value
+        key: "PrivateIpAddress"
+        op: in
+        value: ["10.130.36.33", "10.130.36.71", "10.130.36.154"]
+    actions:
+      - type: tag
+        key: 'app'
+        value: 'ATS'
+#Policy to MTS instances group
+  - name: tag-instances-by-ip-MTS
+    description: |
+      Add tag to MTS instances group
+    resource: ec2
+    filters:
+      - type: value
+        key: "PrivateIpAddress"
+        op: in
+        value: ["10.130.36.21", "10.130.36.72", "10.130.36.158"]
+    actions:
+      - type: tag
+        key: 'app'
+        value: 'MTS'
+#Policy to FileServer instances group
+  - name: tag-instances-by-ip-FileServer
+    description: |
+      Add tag to FileServer instances group
+    resource: ec2
+    filters:
+      - type: value
+        key: "PrivateIpAddress"
+        op: in
+        value: ["10.130.36.41"]
+    actions:
+      - type: tag
+        key: 'app'
+        value: 'FileServer'
+#Policy to Logstash instances group
+  - name: tag-instances-by-ip-Logstash
+    description: |
+      Add tag to Logstash instances group
+    resource: ec2
+    filters:
+      - type: value
+        key: "PrivateIpAddress"
+        op: in
+        value: ["10.130.36.75", "10.130.36.181", "10.130.36.10"]
+    actions:
+      - type: tag
+        key: 'app'
+        value: 'Logstash'

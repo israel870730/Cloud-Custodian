@@ -1,0 +1,7 @@
+policies:
+#Policy to get all info of the EBS
+#Con esta policy traigo toda la informacion de EBS y puedo ver las propiedades que quiero consultar de cada una
+  - name: get-all-ebs
+    description: |
+      Get all info of the EBS
+    resource: ebs

@@ -1,0 +1,7 @@
+policies:
+#Policy to get all info of the VPC
+#Con esta policy traigo toda la informacion de VPC y puedo ver las propiedades que quiero consultar de cada una
+  - name: get-all-VPC
+    description: |
+      Get all info of the VPC
+    resource: vpc

@@ -1,0 +1,162 @@
+policies:
+#Stop EC2 instances with the tag "app:GUI"
+  - name: stop-ec2-instances-daily-GUI
+    description: |
+      Lambda to stop ec2 instances with the tag "app:GUI"
+    mode:
+      type: periodic
+      schedule: "cron(30 17 ? * * *)" # 05:30 PM UTC is 11:00 PM IST 
+      role: arn:aws:iam::012345678901:role/Role-to-lambda-stop-start-ec2
+      tags:
+        Creator: "@irgarcia"
+    resource: ec2
+    filters:
+      - and:
+        - "tag:cost_optimization": present
+        - type: value
+          key: "tag:app"
+          value: "GUI"
+        - "State.Name": running
+    actions:
+      - type: stop
+#Stop EC2 instances with the tag "app:MSG-DLD"
+  - name: stop-ec2-instances-daily-MSG-DLD
+    description: |
+      Lambda to stop ec2 instances with the tag "app:MSG-DLD"
+    mode:
+      type: periodic
+      schedule: "cron(30 20 ? * * *)" # 08:30 PM UTC is 02:00 AM IST 
+      role: arn:aws:iam::012345678901:role/Role-to-lambda-stop-start-ec2
+      tags:
+        Creator: "@irgarcia"
+    resource: ec2
+    filters:
+      - and:
+        - "tag:cost_optimization": present
+        - type: value
+          key: "tag:app"
+          value: "MSG-DLD"
+        - "State.Name": running
+    actions:
+      - type: stop
+#Stop EC2 instances with the tag "app:API"
+  - name: stop-ec2-instances-daily-API
+    description: |
+      Lambda to stop ec2 instances with the tag "app:API"
+    mode:
+      type: periodic
+      schedule: "cron(30 17 ? * * *)" # 05:30 PM UTC is 11:00 PM IST 
+      role: arn:aws:iam::012345678901:role/Role-to-lambda-stop-start-ec2
+      tags:
+        Creator: "@irgarcia"
+    resource: ec2
+    filters:
+      - and:
+        - "tag:cost_optimization": present
+        - type: value
+          key: "tag:app"
+          value: "API"
+        - "State.Name": running
+    actions:
+      - type: stop
+#Stop EC2 instances with the tag "app:ADM"
+  - name: stop-ec2-instances-daily-ADM
+    description: |
+      Lambda to stop ec2 instances with the tag "app:ADM"
+    mode:
+      type: periodic
+      schedule: "cron(30 20 ? * * *)" # 08:30 PM UTC is 02:00 AM IST 
+      role: arn:aws:iam::012345678901:role/Role-to-lambda-stop-start-ec2
+      tags:
+        Creator: "@irgarcia"
+    resource: ec2
+    filters:
+      - and:
+        - "tag:cost_optimization": present
+        - type: value
+          key: "tag:app"
+          value: "ADM"
+        - "State.Name": running
+    actions:
+      - type: stop
+#Stop EC2 instances with the tag "app:ATS"
+  - name: stop-ec2-instances-daily-ATS
+    description: |
+      Lambda to stop ec2 instances with the tag "app:ATS"
+    mode:
+      type: periodic
+      schedule: "cron(30 17 ? * * *)" # 05:30 PM UTC is 11:00 PM IST 
+      role: arn:aws:iam::012345678901:role/Role-to-lambda-stop-start-ec2
+      tags:
+        Creator: "@irgarcia"
+    resource: ec2
+    filters:
+      - and:
+        - "tag:cost_optimization": present
+        - type: value
+          key: "tag:app"
+          value: "ATS"
+        - "State.Name": running
+    actions:
+      - type: stop
+#Stop EC2 instances with the tag "app:MTS"
+  - name: stop-ec2-instances-daily-MTS
+    description: |
+      Lambda to stop ec2 instances with the tag "app:MTS"
+    mode:
+      type: periodic
+      schedule: "cron(30 17 ? * * *)" # 05:30 PM UTC is 11:00 PM IST 
+      role: arn:aws:iam::012345678901:role/Role-to-lambda-stop-start-ec2
+      tags:
+        Creator: "@irgarcia"
+    resource: ec2
+    filters:
+      - and:
+        - "tag:cost_optimization": present
+        - type: value
+          key: "tag:app"
+          value: "MTS"
+        - "State.Name": running
+    actions:
+      - type: stop
+#Stop EC2 instances with the tag "app:FileServer"
+  - name: stop-ec2-instances-daily-FileServer
+    description: |
+      Lambda to stop ec2 instances with the tag "app:FileServer"
+    mode:
+      type: periodic
+      #schedule: "cron(30 17 ? * * *)" # 05:30 PM UTC is 11:00 PM IST
+      schedule: "cron(00 16 ? * * *)"
+      role: arn:aws:iam::012345678901:role/Role-to-lambda-stop-start-ec2
+      tags:
+        Creator: "@irgarcia"
+    resource: ec2
+    filters:
+      - and:
+        - "tag:cost_optimization": present
+        - type: value
+          key: "tag:app"
+          value: "FileServer"
+        - "State.Name": running
+    actions:
+      - type: stop
+#Stop EC2 instances with the tag "app:Logstash"
+  - name: stop-ec2-instances-daily-Logstash
+    description: |
+      Lambda to stop ec2 instances with the tag "app:Logstash"
+    mode:
+      type: periodic
+      schedule: "cron(30 20 ? * * *)" # 08:30 PM UTC is 02:00 AM IST 
+      role: arn:aws:iam::012345678901:role/Role-to-lambda-stop-start-ec2
+      tags:
+        Creator: "@irgarcia"
+    resource: ec2
+    filters:
+      - and:
+        - "tag:cost_optimization": present
+        - type: value
+          key: "tag:app"
+          value: "Logstash"
+        - "State.Name": running
+    actions:
+      - type: stop

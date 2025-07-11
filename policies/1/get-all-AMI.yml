@@ -1,0 +1,7 @@
+policies:
+#Policy to get all info of the ami
+#Con esta policy traigo toda la informacion de las AMI y puedo ver las propiedades que quiero consultar de cada una
+  - name: get-all-ami
+    description: |
+      Get all info of the ami
+    resource: ami
